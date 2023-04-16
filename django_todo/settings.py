@@ -80,16 +80,16 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 # DATABASES = {
-#    'default': dj_database_url.parse('django-insecure-cue22sr7vyomy07$h1uqh$9wvn%orh@_3mlp_2j^i(fs&d!x!8')  # noqa
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
 # }
+
+DATABASES = {
+   'default': dj_database_url.parse('postgres://hvoupuny:X1856yzmJ1gklWjQu7xrWruHiXyFcjEC@kandula.db.elephantsql.com/hvoupuny')  # noqa
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
