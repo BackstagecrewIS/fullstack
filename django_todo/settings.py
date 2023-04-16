@@ -26,12 +26,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-cue22sr7vyomy07$h1uqh$9wvn%orh@_3mlp_2j^i(fs&d!x!8'  # noqa
+SECRET_KEY = 'django-insecure-cue22sr7vyomy07$h1uqh$9wvn%orh@_3mlp_2j^i(fs&d!x!8'  # noqa
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bsc-django-todo-app.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -80,16 +80,16 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
-   'default': dj_database_url.parse('django-insecure-cue22sr7vyomy07$h1uqh$9wvn%orh@_3mlp_2j^i(fs&d!x!8')
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
+# DATABASES = {
+#    'default': dj_database_url.parse('django-insecure-cue22sr7vyomy07$h1uqh$9wvn%orh@_3mlp_2j^i(fs&d!x!8')  # noqa
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
